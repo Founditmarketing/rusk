@@ -7,12 +7,11 @@ export default function Gallery() {
   const categories = ['All', 'Kitchens', 'Baths', 'Interiors'];
 
   const images = [
-    { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Modern Kitchen Island", category: "Kitchens", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
-    { src: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Luxury Bathroom", category: "Baths", colSpan: "col-span-1", rowSpan: "row-span-1" },
-    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Living Room Remodel", category: "Interiors", colSpan: "col-span-1", rowSpan: "row-span-1" },
-    { src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Custom Cabinetry", category: "Kitchens", colSpan: "col-span-1", rowSpan: "row-span-1" },
-    { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "High-End Kitchen", category: "Kitchens", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },
-    { src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Spa-like Tub", category: "Baths", colSpan: "col-span-1", rowSpan: "row-span-1" },
+    { src: "/modern_kitchen_1_1773355099065.png", alt: "Bright Modern Kitchen", category: "Kitchens", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-2" },
+    { src: "/modern_bathroom_1_1773355112885.png", alt: "Double Vanity Bathroom", category: "Baths", colSpan: "col-span-1", rowSpan: "row-span-1" },
+    { src: "/modern_kitchen_2_1773355125554.png", alt: "Spacious Family Kitchen", category: "Kitchens", colSpan: "col-span-1", rowSpan: "row-span-1" },
+    { src: "/modern_bathroom_2_1773355141021.png", alt: "Freestanding Soaking Tub", category: "Baths", colSpan: "col-span-1", rowSpan: "row-span-1" },
+    { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Living Room Remodel", category: "Interiors", colSpan: "col-span-1 md:col-span-2", rowSpan: "row-span-1" },
   ];
 
   const filteredImages = filter === 'All' ? images : images.filter(img => img.category === filter);
@@ -59,8 +58,8 @@ export default function Gallery() {
               key={category}
               onClick={() => setFilter(category)}
               className={`text-sm uppercase tracking-widest transition-all duration-300 pb-1 border-b-2 ${filter === category
-                  ? 'text-rusk-slate-dark border-rusk-gold font-medium'
-                  : 'text-gray-400 border-transparent hover:text-rusk-slate-dark'
+                ? 'text-rusk-slate-dark border-rusk-gold font-medium'
+                : 'text-gray-400 border-transparent hover:text-rusk-slate-dark'
                 }`}
             >
               {category}

@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80"
+            src="/modern_kitchen_1_1773355099065.png"
             alt="Luxury Home Interior"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -125,8 +125,8 @@ export default function Home() {
           >
             <div className="aspect-[4/5] overflow-hidden group">
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Luxury Kitchen Remodel"
+                src="/modern_bathroom_1_1773355112885.png"
+                alt="Beautiful Bathroom Remodel"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
