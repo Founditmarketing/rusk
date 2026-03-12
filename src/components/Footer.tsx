@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-rusk-slate-dark text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
-          
+
           <div>
             <span className="font-serif text-2xl tracking-wider uppercase block mb-6">
               Rusk <span className="text-rusk-gold">Construction</span>
@@ -35,10 +35,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-serif text-lg uppercase tracking-widest mb-6 text-rusk-gold">Explore</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li><Link to="/services" className="hover:text-white transition-colors">Our Services</Link></li>
               <li><Link to="/gallery" className="hover:text-white transition-colors">Portfolio</Link></li>
+              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
               <li><Link to="/quote" className="hover:text-white transition-colors">Request a Consultation</Link></li>
             </ul>
             <div className="flex space-x-4 mt-8">
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
         </div>
-        
+
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>&copy; {new Date().getFullYear()} Rusk Construction. All rights reserved.</p>
           <div className="mt-4 md:mt-0 space-x-4">

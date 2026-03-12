@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 export default function Gallery() {
   const [filter, setFilter] = useState('All');
-  
+
   const categories = ['All', 'Kitchens', 'Baths', 'Interiors'];
 
   const images = [
@@ -20,16 +20,16 @@ export default function Gallery() {
   return (
     <div className="bg-rusk-bg min-h-screen pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-rusk-gold uppercase tracking-[0.2em] text-sm font-medium block mb-4"
           >
             Portfolio
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -37,7 +37,7 @@ export default function Gallery() {
           >
             Selected <span className="italic font-light">Works</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -48,7 +48,7 @@ export default function Gallery() {
         </div>
 
         {/* Filter Navigation */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -58,11 +58,10 @@ export default function Gallery() {
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`text-sm uppercase tracking-widest transition-all duration-300 pb-1 border-b-2 ${
-                filter === category 
-                  ? 'text-rusk-slate-dark border-rusk-gold font-medium' 
+              className={`text-sm uppercase tracking-widest transition-all duration-300 pb-1 border-b-2 ${filter === category
+                  ? 'text-rusk-slate-dark border-rusk-gold font-medium'
                   : 'text-gray-400 border-transparent hover:text-rusk-slate-dark'
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -75,20 +74,21 @@ export default function Gallery() {
               <motion.div
                 key={img.src}
                 layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.5 }}
-                className={`relative overflow-hidden group ${img.colSpan} ${img.rowSpan}`}
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -20 }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+                className={`relative overflow-hidden group ${img.colSpan} ${img.rowSpan} shadow-sm hover:shadow-2xl transition-all duration-500`}
               >
-                <img 
-                  src={img.src} 
-                  alt={img.alt} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 group-hover:filter group-hover:brightness-75"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <span className="text-white font-serif text-xl tracking-wide">{img.alt}</span>
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-rusk-slate-dark/90 to-transparent p-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 flex flex-col justify-end">
+                  <span className="text-rusk-gold text-xs uppercase tracking-widest mb-2 font-medium">{img.category}</span>
+                  <span className="text-white font-serif text-2xl tracking-wide">{img.alt}</span>
                 </div>
               </motion.div>
             ))}

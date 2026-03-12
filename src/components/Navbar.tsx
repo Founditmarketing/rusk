@@ -20,6 +20,7 @@ export default function Navbar() {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Gallery', path: '/gallery' },
+    { name: 'FAQ', path: '/faq' },
     { name: 'Get a Quote', path: '/quote' },
   ];
 
@@ -27,17 +28,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isDark ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isDark ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <span
-              className={`font-serif text-2xl tracking-wider uppercase ${
-                isDark ? 'text-rusk-slate-dark' : 'text-white'
-              }`}
+              className={`font-serif text-2xl tracking-wider uppercase ${isDark ? 'text-rusk-slate-dark' : 'text-white'
+                }`}
             >
               Rusk <span className="text-rusk-gold">Construction</span>
             </span>
@@ -49,24 +48,21 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm tracking-widest uppercase transition-colors ${
-                  isDark
+                className={`text-sm tracking-widest uppercase transition-colors ${isDark
                     ? 'text-rusk-slate hover:text-rusk-gold'
                     : 'text-white/90 hover:text-white'
-                } ${
-                  location.pathname === link.path && isDark ? 'text-rusk-gold font-medium' : ''
-                }`}
+                  } ${location.pathname === link.path && isDark ? 'text-rusk-gold font-medium' : ''
+                  }`}
               >
                 {link.name}
               </Link>
             ))}
             <Link
               to="/quote"
-              className={`px-6 py-2 border text-sm tracking-widest uppercase transition-all ${
-                isDark
+              className={`px-6 py-2 border text-sm tracking-widest uppercase transition-all ${isDark
                   ? 'border-rusk-slate-dark text-rusk-slate-dark hover:bg-rusk-slate-dark hover:text-white'
                   : 'border-white text-white hover:bg-white hover:text-rusk-slate-dark'
-              }`}
+                }`}
             >
               Inquire
             </Link>
