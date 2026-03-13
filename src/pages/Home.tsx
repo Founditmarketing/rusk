@@ -146,6 +146,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Indicators Section */}
+      <section className="bg-rusk-gold py-16 text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-white/20">
+            {[
+              { number: "20+", label: "Years of Master Craftsmanship" },
+              { number: "150+", label: "Luxury Projects Completed" },
+              { number: "100%", label: "Client Satisfaction Focus" },
+              { number: "1", label: "Dedicated Project Manager" }
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="flex flex-col items-center justify-center p-4"
+              >
+                <span className="text-4xl md:text-5xl font-serif mb-2 block">{stat.number}</span>
+                <span className="text-xs md:text-sm uppercase tracking-widest font-medium text-white/90">{stat.label}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Rusk Process Section */}
+      <section className="py-24 md:py-32 bg-rusk-bg overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-rusk-gold uppercase tracking-[0.2em] text-sm font-medium block mb-4">How We Work</span>
+              <h2 className="text-3xl md:text-5xl font-serif text-rusk-slate-dark mb-6">The Rusk <span className="italic font-light">Process</span></h2>
+              <p className="text-gray-600 font-light text-lg">
+                We believe that the journey should be as flawless as the final result. Our proven four-step methodology ensures total transparency and uncompromising quality from concept to completion.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
+            <div className="hidden md:block absolute top-[45px] left-[10%] right-[10%] h-[1px] bg-gray-200 z-0" />
+
+            {[
+              { step: "01", title: "Discovery", desc: "A private consultation to discuss your vision, evaluate your space, and begin outlining potential design solutions and budgets." },
+              { step: "02", title: "Design", desc: "Our team curates material selections, creates detailed architectural blueprints, and presents comprehensive 3D renderings." },
+              { step: "03", title: "Craftsmanship", desc: "Master craftsmen execute the build with meticulous attention to detail, maintaining a clean and respectful worksite." },
+              { step: "04", title: "Reveal", desc: "A white-glove handover of your newly reimagined space, backed by our unwavering commitment to lasting quality." }
+            ].map((process, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: i * 0.2 }}
+                className="relative z-10 flex flex-col items-center text-center group"
+              >
+                <div className="w-24 h-24 rounded-full bg-white border-4 border-rusk-bg shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
+                  <span className="font-serif text-2xl text-rusk-gold">{process.step}</span>
+                </div>
+                <h3 className="text-xl font-serif text-rusk-slate-dark mb-4">{process.title}</h3>
+                <p className="text-gray-500 font-light text-sm px-4 leading-relaxed">{process.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Avoyelles Heritage Section */}
       <section className="bg-rusk-slate-dark text-white py-24 md:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
