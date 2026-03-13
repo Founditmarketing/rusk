@@ -44,8 +44,8 @@ export default function About() {
           >
             <div className="aspect-[3/4] overflow-hidden group">
               <img
-                src="https://images.unsplash.com/photo-1541888081622-67290161d763?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Trevor Ruby - Master Builder Reviewing Plans"
+                src="/blueprint_review_1773363235240.png"
+                alt="Architectural Blueprint Review"
                 className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />

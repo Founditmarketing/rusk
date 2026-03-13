@@ -6,17 +6,17 @@ export default function Services() {
     {
       title: "Bespoke Kitchen Tailoring",
       description: "The kitchen is the culinary and social heart of your luxury home. We design and build masterful, highly functional spaces featuring artisanal custom cabinetry crafted from premium woods, seamlessly integrated professional-grade appliances, and imported stone surfaces. Every sightline and workflow is meticulously planned to enhance both your cooking experience and your entertaining prowess.",
-      image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/custom_cabinetry_1773363206586.png"
     },
     {
       title: "Spa-Inspired Bath Retreats",
       description: "Transform your daily routine into a rejuvenating escape. Our bathroom remodels are sanctuaries of tranquility, incorporating deep freestanding soaking tubs, expansive frameless walk-in showers with intricate, custom tile mosaics, and refined, high-end fixtures. We focus on ambient lighting and premium materials to create an atmosphere of pure relaxation and elite comfort.",
-      image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/modern_bathroom_2_1773355141021.png"
     },
     {
       title: "Full-Scale Architectural Renovations",
       description: "Comprehensive home transformations that breathe new life into your property while honoring its foundational integrity. From structural reimagining and opening floor plans to cohesive, whole-house interior design updates, we manage every complex aspect. Our master craftsmen ensure that new additions blend flawlessly with the old, resulting in a cohesive, breathtaking residence.",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      image: "/home_renovation_exterior_1773363220283.png"
     }
   ];
 
